@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>#Online – trygg digital hjelp for eldre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#innhold">Gå til innholdet</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="logo" href="#">#Online</a>
+      <nav aria-label="Hovedmeny">
+        <ul class="nav-list">
+          <li><a href="#videoer">Videoer</a></li>
+          <li><a href="#priser">Priser</a></li>
+          <li><a href="#butikk">Butikk</a></li>
+          <li><a href="#hjelp">Få hjelp</a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-outline" href="#">Logg inn</a>
+    </div>
+  </header>
+
+  <main id="innhold">
+
+    <!-- Hero: spørsmålet er det første kunden ser -->
+    <section class="hero">
+      <div class="wrap">
+        <h1>Hva lurer du på i dag?</h1>
+        <p class="hero-lead">Skriv det med dine egne ord. Vi finner en rolig video som viser deg steg for steg.</p>
+
+        <form class="ask" action="#" role="search">
+          <label for="sporsmal" class="visually-hidden">Skriv spørsmålet ditt</label>
+          <input id="sporsmal" type="text" placeholder="For eksempel: Hvordan betaler jeg med Vipps?">
+          <button type="submit" class="btn btn-primary">Finn svar</button>
+        </form>
+
+        <p class="topics-title">Eller velg et tema:</p>
+        <ul class="topics">
+          <li><a href="#">BankID</a></li>
+          <li><a href="#">Vipps</a></li>
+          <li><a href="#">Helsenorge</a></li>
+          <li><a href="#">Nettbank</a></li>
+          <li><a href="#">Unngå svindel</a></li>
+          <li><a href="#">Videosamtale</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Slik fungerer det -->
+    <section class="section steps">
+      <div class="wrap">
+        <h2>Slik fungerer det</h2>
+        <ol class="step-list">
+          <li>
+            <h3>Se en kort video</h3>
+            <p>Hver video er 3–5 minutter, med stor tekst og rolig tempo. Sett den på pause når du vil.</p>
+          </li>
+          <li>
+            <h3>Prøv selv på telefonen</h3>
+            <p>Følg med på din egen telefon mens du ser. Du kan se videoen så mange ganger du trenger.</p>
+          </li>
+          <li>
+            <h3>Spør oss hvis du står fast</h3>
+            <p>Send et spørsmål eller bestill en samtale med en veileder. Ingen spørsmål er for små.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Populære videoer -->
+    <section class="section" id="videoer">
+      <div class="wrap">
+        <h2>Mest sette videoer denne uken</h2>
+        <ul class="video-list">
+          <li class="video">
+            <a href="#">
+              <span class="thumb" aria-hidden="true"><span class="play"></span></span>
+              <span class="video-title">Slik logger du inn med BankID-appen</span>
+              <span class="video-meta">4 minutter</span>
+            </a>
+          </li>
+          <li class="video">
+            <a href="#">
+              <span class="thumb" aria-hidden="true"><span class="play"></span></span>
+              <span class="video-title">Send penger til barnebarna med Vipps</span>
+              <span class="video-meta">3 minutter</span>
+            </a>
+          </li>
+          <li class="video">
+            <a href="#">
+              <span class="thumb" aria-hidden="true"><span class="play"></span></span>
+              <span class="video-title">Kjenn igjen en svindel-SMS</span>
+              <span class="video-meta">5 minutter</span>
+            </a>
+          </li>
+          <li class="video">
+            <a href="#">
+              <span class="thumb" aria-hidden="true"><span class="play"></span></span>
+              <span class="video-title">Bestill legetime på Helsenorge</span>
+              <span class="video-meta">4 minutter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trygghetsløfte -->
+    <section class="promise">
+      <div class="wrap promise-inner">
+        <h2>Vårt løfte til deg</h2>
+        <p>#Online ringer deg aldri uten at du har bedt om det, og vi spør aldri etter BankID-koden din. Får du en slik henvendelse, er det svindel.</p>
+      </div>
+    </section>
+
+    <!-- Priser -->
+    <section class="section" id="priser">
+      <div class="wrap">
+        <h2>Velg det som passer deg</h2>
+        <p class="section-lead">Du kan si opp når som helst, med ett trykk.</p>
+
+        <div class="plans">
+          <article class="plan">
+            <h3>Trygg Basis</h3>
+            <p class="price">Gratis</p>
+            <ul>
+              <li>10 grunnvideoer</li>
+              <li>BankID, Vipps og svindel</li>
+            </ul>
+            <a class="btn btn-outline" href="#">Kom i gang</a>
+          </article>
+
+          <article class="plan plan-featured">
+            <p class="plan-badge">Mest valgt</p>
+            <h3>Trygg Pluss</h3>
+            <p class="price">99 kr <span>i måneden</span></p>
+            <ul>
+              <li>Alle videoer</li>
+              <li>Send spørsmål og få svar</li>
+              <li>Gruppekurs på video hver måned</li>
+            </ul>
+            <a class="btn btn-primary" href="#">Velg Pluss</a>
+          </article>
+
+          <article class="plan">
+            <h3>Trygg Premium</h3>
+            <p class="price">349 kr <span>i måneden</span></p>
+            <ul>
+              <li>Alt i Pluss</li>
+              <li>En samtale med veileder hver måned</li>
+            </ul>
+            <a class="btn btn-outline" href="#">Velg Premium</a>
+          </article>
+        </div>
+
+        <p class="gift">Vil du gi #Online til mamma eller pappa? <a href="#">Kjøp et gaveabonnement for 990 kr i året.</a></p>
+      </div>
+    </section>
+
+    <!-- Butikk -->
+    <section class="section shop" id="butikk">
+      <div class="wrap">
+        <h2>Butikken</h2>
+
+        <article class="shop-hero">
+          <div class="shop-image" aria-hidden="true">
+            <span class="phone"></span>
+          </div>
+          <div class="shop-text">
+            <h3>Ferdig oppsatt telefon</h3>
+            <p>Vi setter opp telefonen for deg med stor tekst, de viktigste appene og kontaktene dine. Tre måneder med Trygg Pluss er inkludert.</p>
+            <p class="price">Fra 2 990 kr</p>
+            <a class="btn btn-primary" href="#">Se telefonene</a>
+          </div>
+        </article>
+
+        <ul class="products">
+          <li><a href="#"><span class="product-name">Deksel med kortlomme</span><span class="product-price">249 kr</span></a></li>
+          <li><a href="#"><span class="product-name">Ekstra lang ladekabel (3 meter)</span><span class="product-price">199 kr</span></a></li>
+          <li><a href="#"><span class="product-name">Touchpenn</span><span class="product-price">149 kr</span></a></li>
+          <li><a href="#"><span class="product-name">Smartklokke med fallalarm</span><span class="product-price">1 990 kr</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="hjelp">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="logo">#Online</p>
+        <p>Trygg digital hjelp for eldre.</p>
+      </div>
+      <div>
+        <h2>Trenger du hjelp nå?</h2>
+        <p class="phone-number">Ring oss på <a href="tel:+4712345678">123 45 678</a></p>
+        <p>Hverdager kl. 09–15</p>
+      </div>
+      <div>
+        <h2>Om oss</h2>
+        <ul class="footer-links">
+          <li><a href="#">Personvern</a></li>
+          <li><a href="#">Kjøpsvilkår</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
