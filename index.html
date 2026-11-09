@@ -24,7 +24,12 @@
           <li><a href="#hjelp">Få hjelp</a></li>
         </ul>
       </nav>
-      <a class="btn btn-outline" href="#">Logg inn</a>
+      <div class="header-actions">
+        <a class="btn btn-outline" href="#">Logg inn</a>
+        <button class="btn btn-primary cart-toggle" type="button" aria-controls="handlekurv" aria-expanded="false">
+          Handlekurv <span class="cart-count">0</span>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -160,7 +165,13 @@
           </article>
         </div>
 
-        <p class="gift">Vil du gi #Online til mamma eller pappa? <a href="#">Kjøp et gaveabonnement for 990 kr i året.</a></p>
+        <div class="gift">
+          <p>Vil du gi #Online til mamma eller pappa? Et gaveabonnement med Trygg Pluss i ett år koster 990 kr.</p>
+          <button class="btn btn-outline add-to-cart" type="button"
+                  data-id="gave" data-name="Gaveabonnement Trygg Pluss (12 mnd)" data-price="990">
+            Legg gaveabonnement i handlekurven
+          </button>
+        </div>
       </div>
     </section>
 
@@ -177,15 +188,39 @@
             <h3>Ferdig oppsatt telefon</h3>
             <p>Vi setter opp telefonen for deg med stor tekst, de viktigste appene og kontaktene dine. Tre måneder med Trygg Pluss er inkludert.</p>
             <p class="price">Fra 2 990 kr</p>
-            <a class="btn btn-primary" href="#">Se telefonene</a>
+            <button class="btn btn-primary add-to-cart" type="button"
+                    data-id="telefon" data-name="Ferdig oppsatt telefon" data-price="2990">
+              Legg i handlekurven
+            </button>
           </div>
         </article>
 
+        <h3 class="products-title">Tilbehør</h3>
         <ul class="products">
-          <li><a href="#"><span class="product-name">Deksel med kortlomme</span><span class="product-price">249 kr</span></a></li>
-          <li><a href="#"><span class="product-name">Ekstra lang ladekabel (3 meter)</span><span class="product-price">199 kr</span></a></li>
-          <li><a href="#"><span class="product-name">Touchpenn</span><span class="product-price">149 kr</span></a></li>
-          <li><a href="#"><span class="product-name">Smartklokke med fallalarm</span><span class="product-price">1 990 kr</span></a></li>
+          <li class="product">
+            <span class="product-name">Deksel med kortlomme</span>
+            <span class="product-price">249 kr</span>
+            <button class="btn btn-outline add-to-cart" type="button"
+                    data-id="deksel" data-name="Deksel med kortlomme" data-price="249">Legg i handlekurven</button>
+          </li>
+          <li class="product">
+            <span class="product-name">Ekstra lang ladekabel (3 meter)</span>
+            <span class="product-price">199 kr</span>
+            <button class="btn btn-outline add-to-cart" type="button"
+                    data-id="kabel" data-name="Ekstra lang ladekabel (3 meter)" data-price="199">Legg i handlekurven</button>
+          </li>
+          <li class="product">
+            <span class="product-name">Touchpenn</span>
+            <span class="product-price">149 kr</span>
+            <button class="btn btn-outline add-to-cart" type="button"
+                    data-id="touchpenn" data-name="Touchpenn" data-price="149">Legg i handlekurven</button>
+          </li>
+          <li class="product">
+            <span class="product-name">Smartklokke med fallalarm</span>
+            <span class="product-price">1 990 kr</span>
+            <button class="btn btn-outline add-to-cart" type="button"
+                    data-id="klokke" data-name="Smartklokke med fallalarm" data-price="1990">Legg i handlekurven</button>
+          </li>
         </ul>
       </div>
     </section>
@@ -214,5 +249,28 @@
     </div>
   </footer>
 
+  <!-- Handlekurv -->
+  <div class="cart-overlay" data-close-cart></div>
+
+  <aside class="cart" id="handlekurv" aria-labelledby="handlekurv-tittel" role="dialog" aria-modal="true">
+    <div class="cart-header">
+      <h2 id="handlekurv-tittel">Din handlekurv</h2>
+      <button class="cart-close" type="button" data-close-cart aria-label="Lukk handlekurven">✕</button>
+    </div>
+
+    <p class="cart-empty">Handlekurven er tom. Trykk «Legg i handlekurven» på en vare for å legge den til.</p>
+    <ul class="cart-items"></ul>
+
+    <div class="cart-footer">
+      <p class="cart-total">Totalt: <strong class="cart-total-sum">0 kr</strong></p>
+      <p class="cart-note">Fri frakt. 14 dagers angrerett.</p>
+      <button class="btn btn-primary cart-checkout" type="button">Betal med Vipps</button>
+      <p class="cart-message" role="status"></p>
+    </div>
+  </aside>
+
+  <p class="toast" role="status" aria-live="polite"></p>
+
+  <script src="script.js"></script>
 </body>
 </html>
